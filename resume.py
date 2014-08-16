@@ -12,14 +12,6 @@ from app import app, principals
 from collections import namedtuple
 from functools import partial
 
-"""
-@principals.identity_loader
-def load_identity():
-    if not isinstance(current_user._get_current_object(), AnonymousIdentity):
-        print current_user.id
-        return Identity(current_user.id)
-"""
-
 ResumeNeed = namedtuple('resume', ['method', 'value'])
 EditResumeNeed = partial(ResumeNeed, 'edit')
 
